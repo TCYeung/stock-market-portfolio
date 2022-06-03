@@ -14,7 +14,7 @@ function StockList(props) {
       </thead>
       <tbody>
         {
-          sortedStockList.map((stock, idx) => <StockListItem key={idx} stock={stock} /> )
+          sortedStockList.map((stock, idx) => <StockListItem key={idx} stock={stock} portfolio={props.portfolio} stocks={props.stocks}/> )
         }
       </tbody>
       <tfoot>
