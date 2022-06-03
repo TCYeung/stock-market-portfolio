@@ -32,7 +32,6 @@ function StockListItem(props) {
           return response.json();
       })
       .then(function(response) {
-        console.log("delete-stock complete");
         props.portfolio(props.stocks);
       })
       .catch(function(error) {

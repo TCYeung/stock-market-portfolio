@@ -31,7 +31,6 @@ function AddStockForm(props) {
           return response.json();
       })
       .then(function(response) {
-        console.log("add-stock complete");
         props.portfolio(props.stocks);
         props.setForm(false);
       })
