@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import { Button, Form, Input, Label } from 'reactstrap';
-import StockList from './StockList';
-import getPortfolio from './getPortfolio';
-import createTickerList from './createTickerList';
-import getStockPrice from './getStockPrice';
-import utilities from './utilities';
 
 function AddStockForm(props) {
   
