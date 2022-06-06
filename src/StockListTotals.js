@@ -5,9 +5,9 @@ function StockListTotals(props) {
   const { stocks } = props;
   
   const totals = stocks.reduce((summary, stock) => {
+    summary.purchaseValue += stock.purchaseValue;
     if (stock.profit !== undefined && stock.currentValue !== undefined) {
       summary.profit += stock.profit;
-      summary.purchaseValue += stock.purchaseValue;
       summary.currentValue += stock.currentValue;
     }
     return summary;
