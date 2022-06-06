@@ -54,8 +54,8 @@ function App() {
         info.name = stockPrices[stock.ticker].name;
         info.currentPrice = stockPrices[stock.ticker].price;
         info.purchaseValue = stock.shares * stock.purchasePrice;
-        info.currentValue = info.shares * info.currentPrice;
-        info.profit = info.currentValue - info.purchaseValue;
+        (info.currentPrice === undefined) ? info.currentValue = undefined : info.currentValue = info.shares * info.currentPrice;
+        (info.currentValue === undefined) ? info.profit = undefined : info.profit = info.currentValue - info.purchaseValue;
         info.formattedPurchaseValue = utilities.formatNumber(info.purchaseValue);
         info.formattedCurrentValue = utilities.formatNumber(info.currentValue);
         info.formattedProfit = utilities.formatNumber(info.profit);

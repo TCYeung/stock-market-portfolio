@@ -1,5 +1,5 @@
 import utilities from './utilities';
-import { AiFillDelete } from 'react-icons/ai'
+import { AiFillDelete } from 'react-icons/ai';
 
 function StockListItem(props) {
   
@@ -14,7 +14,7 @@ function StockListItem(props) {
   const profitClass = stock.profit < 0 ? 'loss' : 'profit';
   
   const deleteStock = evt => {
-    let ticker = evt.currentTarget.getAttribute('data-ticker')
+    let ticker = evt.currentTarget.getAttribute('data-ticker');
     
     const api = 'https://omrdkfwqj6.execute-api.us-east-1.amazonaws.com/prod/delete-stock';
     

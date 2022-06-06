@@ -5,9 +5,11 @@ function StockListTotals(props) {
   const { stocks } = props;
   
   const totals = stocks.reduce((summary, stock) => {
-    summary.profit += stock.profit;
-    summary.purchaseValue += stock.purchaseValue;
-    summary.currentValue += stock.currentValue;
+    if (stock.profit !== undefined && stock.currentValue !== undefined) {
+      summary.profit += stock.profit;
+      summary.purchaseValue += stock.purchaseValue;
+      summary.currentValue += stock.currentValue;
+    }
     return summary;
   }, {currentValue: 0, purchaseValue: 0, profit: 0});
   const profitClass = totals.profit < 0 ? 'loss' : 'profit';
